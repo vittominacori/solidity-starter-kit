@@ -1,0 +1,81 @@
+{
+  "name": "solidity-starter-kit",
+  "version": "1.0.0",
+  "description": "A starter kit for Ethereum Smart Contracts development",
+  "files": [
+    "contracts",
+    "test"
+  ],
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "token",
+    "truffle",
+    "openzeppelin"
+  ],
+  "scripts": {
+    "dev": "lite-server",
+    "test": "scripts/test.sh",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:sol": "solium -d contracts",
+    "lint:sol:fix": "solium -d contracts --fix",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
+    "console": "truffle console",
+    "coverage": "scripts/coverage.sh",
+    "version": "scripts/version.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vittominacori/solidity-starter-kit.git"
+  },
+  "homepage": "https://github.com/vittominacori/solidity-starter-kit/",
+  "bugs": {
+    "url": "https://github.com/vittominacori/solidity-starter-kit/issues"
+  },
+  "author": "Vittorio Minacori (https://github.com/vittominacori)",
+  "contributors": [
+    {
+      "name": "Vittorio Minacori",
+      "url": "https://github.com/vittominacori"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-bignumber": "^3.0.0",
+    "coveralls": "^3.0.2",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "ethereumjs-abi": "^0.6.5",
+    "ethereumjs-util": "^6.0.0",
+    "ethereumjs-wallet": "^0.6.3",
+    "ethjs-abi": "^0.2.1",
+    "ethlint": "^1.2.2",
+    "ganache-cli": "^6.2.5",
+    "lite-server": "^2.4.0",
+    "log4js": "^3.0.6",
+    "prompt-sync": "^4.1.6",
+    "solidity-coverage": "^0.5.11",
+    "truffle": "^4.1.15",
+    "truffle-contract": "^3.0.7",
+    "truffle-hdwallet-provider": "^1.0.2",
+    "truffle-wallet-provider": "^0.0.5",
+    "vuepress": "^0.14.8",
+    "web3": "0.20.6",
+    "web3-eth-abi": "^1.0.0-beta.37",
+    "web3-utils": "^1.0.0-beta.37"
+  },
+  "dependencies": {
+    "eth-token-recover": "2.0.1",
+    "openzeppelin-solidity": "2.0.0"
+  }
+}
