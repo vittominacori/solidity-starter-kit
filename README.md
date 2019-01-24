@@ -1,4 +1,4 @@
-# Smart Contract Box
+# Solidity Starter Kit
 
 [![Build Status](https://travis-ci.org/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.org/vittominacori/solidity-starter-kit) 
 [![Coverage Status](https://coveralls.io/repos/github/vittominacori/solidity-starter-kit/badge.svg)](https://coveralls.io/github/vittominacori/solidity-starter-kit)
@@ -9,10 +9,12 @@ A starter kit for Ethereum Smart Contracts development
 
 ## Development
 
-Install Truffle
+Install Truffle if you want to run your own node
+
+Version 4.1.15 required
 
 ```bash
-npm install -g truffle      // Version 4.1.15+ required
+npm install -g truffle
 ```
 
 ### Install dependencies
@@ -43,22 +45,22 @@ npm run lint:fix
 
 ### Compile and test the contracts
  
-Open the Truffle console
+Compile
 
 ```bash
-truffle develop
+npm run compile
 ```
 
-Compile 
+Test 
 
 ```bash
-compile 
+npm run test 
 ```
 
-Test
+Coverage
 
 ```bash
-test
+npm run coverage
 ```
 
 ### Profiling
