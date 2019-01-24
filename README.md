@@ -1,3 +1,7 @@
+---
+title: Easily build your smart contracts
+---
+
 # Solidity Starter Kit
 
 [![Build Status](https://travis-ci.org/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.org/vittominacori/solidity-starter-kit) 
@@ -43,21 +47,21 @@ Use both and fix
 npm run lint:fix
 ```
 
-### Compile and test the contracts
+## Usage
  
-Compile
+### Compile
 
 ```bash
 npm run compile
 ```
 
-Test 
+### Test 
 
 ```bash
 npm run test 
 ```
 
-Coverage
+### Code Coverage
 
 ```bash
 npm run coverage
@@ -70,6 +74,8 @@ npm run profile
 ```
 
 ## Optional
+
+### Flattener
 
 Install the [truffle-flattener](https://github.com/alcuadrado/truffle-flattener)
 
