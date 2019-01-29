@@ -6,6 +6,7 @@ title: Easily build your smart contracts
 
 [![Build Status](https://travis-ci.org/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.org/vittominacori/solidity-starter-kit) 
 [![Coverage Status](https://coveralls.io/repos/github/vittominacori/solidity-starter-kit/badge.svg)](https://coveralls.io/github/vittominacori/solidity-starter-kit)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 
 A starter kit for Ethereum Smart Contracts development
@@ -18,7 +19,7 @@ Install Truffle if you want to run your own node
 Version 4.1.15 required
 
 ```bash
-npm install -g truffle
+npm install -g truffle@4.1.15
 ```
 
 ### Install dependencies
@@ -29,7 +30,7 @@ npm install
 
 ### Linter
 
-Use Ethlint
+Use Solhint
 
 ```bash
 npm run lint:sol
@@ -41,7 +42,7 @@ Use ESLint
 npm run lint:js
 ```
 
-Use both and fix
+Use ESLint and fix
 
 ```bash
 npm run lint:fix
@@ -91,4 +92,4 @@ truffle-flattener contracts/SampleContract.sol > dist/SampleContract.sol
 
 ## License
 
-Code released under the [MIT License](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE).
+Code released under the [MIT License](./LICENSE).
