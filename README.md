@@ -6,7 +6,7 @@ title: Easily build your smart contracts
 
 [![Build Status](https://travis-ci.org/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.org/vittominacori/solidity-starter-kit) 
 [![Coverage Status](https://coveralls.io/repos/github/vittominacori/solidity-starter-kit/badge.svg)](https://coveralls.io/github/vittominacori/solidity-starter-kit)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE)
 
 
 A starter kit for Ethereum Smart Contracts development
@@ -92,4 +92,4 @@ truffle-flattener contracts/SampleContract.sol > dist/SampleContract.sol
 
 ## License
 
-Code released under the [MIT License](./LICENSE).
+Code released under the [MIT License](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE).
