@@ -28,26 +28,6 @@ npm install -g truffle@4.1.15
 npm install
 ```
 
-### Linter
-
-Use Solhint
-
-```bash
-npm run lint:sol
-```
-
-Use ESLint
-
-```bash
-npm run lint:js
-```
-
-Use ESLint and fix
-
-```bash
-npm run lint:fix
-```
-
 ## Usage
  
 ### Compile
@@ -66,6 +46,26 @@ npm run test
 
 ```bash
 npm run coverage
+```
+
+## Linter
+
+Use Solhint
+
+```bash
+npm run lint:sol
+```
+
+Use ESLint
+
+```bash
+npm run lint:js
+```
+
+Use ESLint and fix
+
+```bash
+npm run lint:fix
 ```
 
 ## Flattener
