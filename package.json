@@ -31,6 +31,8 @@
     "coverage": "scripts/coverage.sh",
     "clean": "rm -rf coverage",
     "profile": "npm run clean && npm run coverage && open coverage/index.html",
+    "flat": "scripts/flat.sh",
+    "analyze": "scripts/analyze.sh",
     "version": "scripts/version.js"
   },
   "repository": {

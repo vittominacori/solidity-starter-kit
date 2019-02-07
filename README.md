@@ -6,7 +6,7 @@ title: Easily build your smart contracts
 
 [![Build Status](https://travis-ci.org/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.org/vittominacori/solidity-starter-kit) 
 [![Coverage Status](https://coveralls.io/repos/github/vittominacori/solidity-starter-kit/badge.svg)](https://coveralls.io/github/vittominacori/solidity-starter-kit)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE)
+[![MIT licensed](https://img.shields.io/github/license/vittominacori/solidity-starter-kit.svg)](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE)
 
 
 A starter kit for Ethereum Smart Contracts development
@@ -72,53 +72,44 @@ npm run lint:fix
 
 This allow to flatten the code into a single file
 
+Edit `scripts/flat.sh` to add your contracts
+
 ```bash
-truffle-flattener contracts/SampleContract.sol > dist/SampleContract.sol
+npm run flat
 ```
 
 ## Analysis
 
-Note: it is better to analyze the flattened code to have a bigger overview on the entire codebase
+Note: it is better to analyze the flattened code to have a bigger overview on the entire codebase. So run the flattener first.
 
 ### Describe
 
 The `describe` command shows a summary of the contracts and methods in the files provided
 
 ```bash
-surya describe dist/SampleContract.sol
+surya describe dist/SampleContract.dist.sol
 ```
 
 ### Dependencies
 
-The `dependencies` command outputs the c3-linearization of a given contract's inheirtance graph. Contracts will be listed starting with most-derived, ie. if the same function is defined in more than one contract, the solidity compiler will use the definition in whichever contract is listed first
+The `dependencies` command outputs the c3-linearization of a given contract's inheirtance graph. Contracts will be listed starting with most-derived, ie. if the same function is defined in more than one contract, the solidity compiler will use the definition in whichever contract is listed first.
 
 ```bash
-surya dependencies SampleContract dist/SampleContract.sol
+surya dependencies SampleContract dist/SampleContract.dist.sol
 ```
+### Generate Report
 
-### Inheritance Tree
-
-The `inheritance` command outputs a DOT-formatted graph of the inheritance tree
+Edit `scripts/analyze.sh` to add your contracts 
 
 ```bash
-surya inheritance dist/SampleContract.sol | dot -Tpng > analysis/inheritance-tree/SampleContract.png
+npm run analyze
 ```
 
-### Control Flow
+The `inheritance` command outputs a DOT-formatted graph of the inheritance tree.
 
-The `graph` command outputs a DOT-formatted graph of the control flow
+The `graph` command outputs a DOT-formatted graph of the control flow.
 
-```bash
-surya graph dist/SampleContract.sol | dot -Tpng > analysis/control-flow/SampleContract.png
-```
-
-### Description Table
-
-The `mdreport` command creates a markdown description report with tables comprising information about the system's files, contracts and their functions
-
-```bash
-surya mdreport analysis/description-table/SampleContract.md dist/SampleContract.sol
-```
+The `mdreport` command creates a markdown description report with tables comprising information about the system's files, contracts and their functions.
 
 ## License
 
