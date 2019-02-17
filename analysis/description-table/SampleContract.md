@@ -16,17 +16,17 @@
 |     └      |  **Function Name**  |  **Visibility**  |  **Mutability**  |  **Modifiers**  |
 ||||||
 | **IERC20** | Interface |  |||
-| └ | totalSupply | External ❗️ |   | |
-| └ | balanceOf | External ❗️ |   | |
-| └ | allowance | External ❗️ |   | |
-| └ | transfer | External ❗️ | 🛑  | |
-| └ | approve | External ❗️ | 🛑  | |
-| └ | transferFrom | External ❗️ | 🛑  | |
+| └ | totalSupply | External ❗️ |   |NO❗️ |
+| └ | balanceOf | External ❗️ |   |NO❗️ |
+| └ | allowance | External ❗️ |   |NO❗️ |
+| └ | transfer | External ❗️ | 🛑  |NO❗️ |
+| └ | approve | External ❗️ | 🛑  |NO❗️ |
+| └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 ||||||
 | **Ownable** | Implementation |  |||
 | └ | \<Constructor\> | Internal 🔒 | 🛑  | |
-| └ | owner | Public ❗️ |   | |
-| └ | isOwner | Public ❗️ |   | |
+| └ | owner | Public ❗️ |   |NO❗️ |
+| └ | isOwner | Public ❗️ |   |NO❗️ |
 | └ | renounceOwnership | Public ❗️ | 🛑  | onlyOwner |
 | └ | transferOwnership | Public ❗️ | 🛑  | onlyOwner |
 | └ | _transferOwnership | Internal 🔒 | 🛑  | |
@@ -36,7 +36,7 @@
 ||||||
 | **SampleContract** | Implementation | TokenRecover |||
 | └ | \<Constructor\> | Public ❗️ | 🛑  | |
-| └ | creator | Public ❗️ |   | |
+| └ | creator | Public ❗️ |   |NO❗️ |
 | └ | creatorDoesWork | Public ❗️ | 🛑  | onlyCreator |
 | └ | ownerDoesWork | Public ❗️ | 🛑  | onlyOwner |
 
