@@ -54,9 +54,9 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-bignumber": "^3.0.0",
-    "coveralls": "^3.0.2",
+    "coveralls": "^3.0.3",
     "dotenv": "^6.2.0",
-    "eslint": "^5.14.0",
+    "eslint": "^5.14.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
@@ -74,17 +74,17 @@
     "solidity-coverage": "^0.5.11",
     "surya": "^0.2.8",
     "truffle": "^4.1.15",
-    "truffle-contract": "^3.0.7",
-    "truffle-flattener": "1.2.11",
+    "truffle-contract": "3.0.7",
+    "truffle-flattener": "1.2.12",
     "truffle-hdwallet-provider": "^1.0.4",
     "truffle-wallet-provider": "^0.0.5",
-    "vuepress": "^0.14.8",
+    "vuepress": "^0.14.9",
     "web3": "0.20.6",
     "web3-eth-abi": "^1.0.0-beta.46",
     "web3-utils": "^1.0.0-beta.46"
   },
   "dependencies": {
-    "eth-token-recover": "2.0.1",
-    "openzeppelin-solidity": "2.0.0"
+    "eth-token-recover": "2.0.2",
+    "openzeppelin-solidity": "2.0.1"
   }
 }
