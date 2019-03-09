@@ -69,6 +69,7 @@
     "pify": "^4.0.1",
     "solhint": "^1.5.1",
     "solidity-coverage": "https://github.com:rotcivegaf/solidity-coverage.git#5875f5b7bc74d447f3312c9c0e9fc7814b482477",
+    "surya": "^0.2.8",
     "truffle": "^5.0.7",
     "truffle-flattener": "1.2.12",
     "vuepress": "^0.14.10"
