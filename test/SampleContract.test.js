@@ -1,18 +1,11 @@
-const shouldFail = require('openzeppelin-solidity/test/helpers/shouldFail');
+const { BN, shouldFail } = require('openzeppelin-test-helpers');
 
-const { shouldBehaveLikeOwnable } = require('openzeppelin-solidity/test/ownership/Ownable.behavior');
 const { shouldBehaveLikeTokenRecover } = require('eth-token-recover/test/TokenRecover.behaviour');
-
-const BigNumber = web3.BigNumber;
-
-require('chai')
-  .use(require('chai-bignumber')(BigNumber))
-  .should();
 
 const SampleContract = artifacts.require('SampleContract');
 
 contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
-  const value = new BigNumber(1000);
+  const value = new BN(1000);
 
   beforeEach(async function () {
     this.contract = await SampleContract.new({ from: creator });
@@ -64,14 +57,6 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
         await shouldFail.reverting(this.contract.ownerDoesWork(value, { from: anotherAccount }));
       });
     });
-  });
-
-  context('testing ownership', function () {
-    beforeEach(async function () {
-      this.ownable = this.contract;
-    });
-
-    shouldBehaveLikeOwnable(creator, [anotherAccount]);
   });
 
   context('like a TokenRecover', function () {

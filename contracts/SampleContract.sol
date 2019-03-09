@@ -1,4 +1,4 @@
-pragma solidity ^0.4.25;
+pragma solidity ^0.5.5;
 
 import "eth-token-recover/contracts/TokenRecover.sol";
 

@@ -14,14 +14,6 @@ A starter kit for Ethereum Smart Contracts development
 
 ## Development
 
-Install Truffle if you want to run your own node
-
-Version 4.1.15 required
-
-```bash
-npm install -g truffle@4.1.15
-```
-
 ### Install dependencies
 
 ```bash
@@ -29,7 +21,13 @@ npm install
 ```
 
 ## Usage
- 
+
+Open the Truffle console
+
+```bash
+npm run console
+```
+
 ### Compile
 
 ```bash
