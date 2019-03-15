@@ -1,10 +1,10 @@
-pragma solidity ^0.5.5;
+pragma solidity ^0.5.6;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/IERC20.sol
 
 /**
  * @title ERC20 interface
- * @dev see https://github.com/ethereum/EIPs/issues/20
+ * @dev see https://eips.ethereum.org/EIPS/eip-20
  */
 interface IERC20 {
     function transfer(address to, uint256 value) external returns (bool);
@@ -69,9 +69,10 @@ contract Ownable {
 
     /**
      * @dev Allows the current owner to relinquish control of the contract.
-     * @notice Renouncing to ownership will leave the contract without an owner.
      * It will not be possible to call the functions with the `onlyOwner`
      * modifier anymore.
+     * @notice Renouncing ownership will leave the contract without an owner,
+     * thereby removing any functionality that is only available to the owner.
      */
     function renounceOwnership() public onlyOwner {
         emit OwnershipTransferred(_owner, address(0));
