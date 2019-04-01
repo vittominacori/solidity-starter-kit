@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| dist/SampleContract.dist.sol | b24a653e73dce58774601a2abfe33075b5314d1a |
+| dist/SampleContract.dist.sol | a40ac8159bc68e9f3c80a918b1d8a989d9dc137d |
 
 
 ### Contracts Description Table
