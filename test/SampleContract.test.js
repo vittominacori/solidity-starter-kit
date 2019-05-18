@@ -1,4 +1,4 @@
-const { BN, shouldFail } = require('openzeppelin-test-helpers');
+const { BN, expectEvent, shouldFail } = require('openzeppelin-test-helpers');
 
 const { shouldBehaveLikeTokenRecover } = require('eth-token-recover/test/TokenRecover.behaviour');
 
@@ -24,10 +24,11 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
   context('calling the creatorDoesWork function', function () {
     describe('if creator is calling', function () {
       it('emits a WorkDone event', async function () {
-        const { logs } = await this.contract.creatorDoesWork(value, { from: creator });
-        assert.equal(logs.length, 1);
-        assert.equal(logs[0].event, 'WorkDone');
-        logs[0].args.value.should.be.bignumber.equal(value);
+        const receipt = await this.contract.creatorDoesWork(value, { from: creator });
+
+        await expectEvent.inTransaction(receipt.tx, SampleContract, 'WorkDone', {
+          value: value,
+        });
       });
     });
 
@@ -45,10 +46,11 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
 
     describe('if owner is calling', function () {
       it('emits a WorkDone event', async function () {
-        const { logs } = await this.contract.ownerDoesWork(value, { from: newOwner });
-        assert.equal(logs.length, 1);
-        assert.equal(logs[0].event, 'WorkDone');
-        logs[0].args.value.should.be.bignumber.equal(value);
+        const receipt = await this.contract.ownerDoesWork(value, { from: newOwner });
+
+        await expectEvent.inTransaction(receipt.tx, SampleContract, 'WorkDone', {
+          value: value,
+        });
       });
     });
 
