@@ -1,4 +1,4 @@
-const { BN, expectEvent, shouldFail } = require('openzeppelin-test-helpers');
+const { BN, expectEvent, expectRevert } = require('openzeppelin-test-helpers');
 
 const { shouldBehaveLikeTokenRecover } = require('eth-token-recover/test/TokenRecover.behaviour');
 
@@ -34,7 +34,7 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
 
     describe('if another account is calling', function () {
       it('reverts', async function () {
-        await shouldFail.reverting(this.contract.creatorDoesWork(value, { from: anotherAccount }));
+        await expectRevert.unspecified(this.contract.creatorDoesWork(value, { from: anotherAccount }));
       });
     });
   });
@@ -56,7 +56,7 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
 
     describe('if another account is calling', function () {
       it('reverts', async function () {
-        await shouldFail.reverting(this.contract.ownerDoesWork(value, { from: anotherAccount }));
+        await expectRevert.unspecified(this.contract.ownerDoesWork(value, { from: anotherAccount }));
       });
     });
   });
