@@ -76,7 +76,7 @@
     "vuepress": "^0.14.11"
   },
   "dependencies": {
-    "eth-token-recover": "^2.2.3",
-    "openzeppelin-solidity": "2.2.0"
+    "eth-token-recover": "2.3.0",
+    "openzeppelin-solidity": "2.3.0"
   }
 }
