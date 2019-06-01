@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| dist/SampleContract.dist.sol | 5e76c3a27c91fb5c39a218e63618ae6382af565b |
+| dist/SampleContract.dist.sol | 855c50e320bfff70eecb195df086b23abe213f5d |
 
 
 ### Contracts Description Table
@@ -16,12 +16,12 @@
 |     └      |  **Function Name**  |  **Visibility**  |  **Mutability**  |  **Modifiers**  |
 ||||||
 | **IERC20** | Interface |  |||
-| └ | transfer | External ❗️ | 🛑  |NO❗️ |
-| └ | approve | External ❗️ | 🛑  |NO❗️ |
-| └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 | └ | totalSupply | External ❗️ |   |NO❗️ |
 | └ | balanceOf | External ❗️ |   |NO❗️ |
+| └ | transfer | External ❗️ | 🛑  |NO❗️ |
 | └ | allowance | External ❗️ |   |NO❗️ |
+| └ | approve | External ❗️ | 🛑  |NO❗️ |
+| └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 ||||||
 | **Ownable** | Implementation |  |||
 | └ | \<Constructor\> | Internal 🔒 | 🛑  | |
