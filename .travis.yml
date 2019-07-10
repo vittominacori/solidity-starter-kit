@@ -5,10 +5,9 @@ language: node_js
 node_js:
   - "10"
 
-# for some reason caching fails build
-# cache:
-#  directories:
-#    - node_modules
+cache:
+  directories:
+    - node_modules
 
 jobs:
   # XXX fast_finish doesn't work with stages yet. See
