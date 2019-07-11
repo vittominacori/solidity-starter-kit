@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "lite-server",
     "console": "truffle develop",
-    "compile": "truffle compile --all",
+    "compile": "scripts/compile.sh",
     "coverage": "scripts/coverage.sh",
     "clean": "rm -rf coverage",
     "profile": "npm run clean && npm run coverage && open coverage/index.html",
