@@ -19,6 +19,7 @@ const App = {
     } else {
       console.log('provided web3');
       this.web3Provider = new Web3.providers.HttpProvider('https://127.0.0.1:9545');
+      window.web3 = new Web3(this.web3Provider);
     }
 
     return this.initContracts();
