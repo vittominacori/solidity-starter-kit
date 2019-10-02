@@ -24,8 +24,12 @@ jobs:
       script: npm run lint
 
     - stage: tests
-      name: "Unit tests"
+      name: "Unit tests (using Truffle)"
       script: npm run test
+
+    - stage: tests
+      name: "Unit tests (using Buidler)"
+      script: npm run buidler:test
 
     - stage: tests
       name: "Unit tests with coverage report"

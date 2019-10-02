@@ -31,6 +31,9 @@
     "flat": "scripts/flat.sh",
     "analyze": "scripts/analyze.sh",
     "version": "scripts/version.js",
+    "buidler:compile": "buidler compile",
+    "buidler:console": "buidler console",
+    "buidler:test": "buidler test",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:deploy": "vuepress build docs && sh docs/deploy/deploy.sh"
@@ -52,6 +55,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@nomiclabs/buidler": "^1.0.1",
+    "@nomiclabs/buidler-truffle5": "^1.0.1",
+    "@nomiclabs/buidler-web3": "^1.0.1",
+    "@vuepress/plugin-google-analytics": "^1.1.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.6",
     "eslint": "^6.5.1",
@@ -74,10 +81,10 @@
     "truffle": "^5.0.38",
     "truffle-flattener": "1.2.11",
     "vuepress": "^1.1.0",
-    "@vuepress/plugin-google-analytics": "^1.1.0"
+    "web3": "^1.2.1"
   },
   "dependencies": {
-    "eth-token-recover": "2.3.3",
-    "@openzeppelin/contracts": "2.3.0"
+    "@openzeppelin/contracts": "2.3.0",
+    "eth-token-recover": "2.3.3"
   }
 }

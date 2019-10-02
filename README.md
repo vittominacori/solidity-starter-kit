@@ -20,7 +20,7 @@ A starter kit for Ethereum Smart Contracts development
 npm install
 ```
 
-## Usage
+## Usage (using Truffle)
 
 Open the Truffle console
 
@@ -38,6 +38,26 @@ npm run compile
 
 ```bash
 npm run test 
+```
+
+## Usage (using Buidler)
+
+Open the Buidler console
+
+```bash
+npm run buidler:console
+```
+
+### Compile
+
+```bash
+npm run buidler:compile
+```
+
+### Test 
+
+```bash
+npm run buidler:test 
 ```
 
 ### Code Coverage
@@ -64,6 +84,16 @@ Use ESLint and fix
 
 ```bash
 npm run lint:fix
+```
+
+## Use web3 console in your browser (i.e. to use MetaMask)
+
+By default it takes contracts compiled with Truffle.
+
+To use Buidler compiled contracts change `./build/contracts` with `./artifacts` in `bs-config.json`
+
+```bash
+npm run dev
 ```
 
 ## Flattener
