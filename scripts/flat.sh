@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-truffle-flattener contracts/SampleContract.sol > dist/SampleContract.dist.sol
+CONTRACT_NAME=SampleContract
+
+truffle-flattener contracts/$CONTRACT_NAME.sol > dist/$CONTRACT_NAME.dist.sol

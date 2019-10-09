@@ -75,6 +75,7 @@
     "lite-server": "^2.5.4",
     "openzeppelin-test-helpers": "^0.4.3",
     "pify": "^4.0.1",
+    "sol2uml": "^1.1.11",
     "solhint": "^2.3.0",
     "solidity-coverage": "github:rotcivegaf/solidity-coverage#5875f5b7bc74d447f3312c9c0e9fc7814b482477",
     "surya": "^0.2.11",

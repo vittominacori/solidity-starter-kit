@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-surya inheritance dist/SampleContract.dist.sol | dot -Tpng > analysis/inheritance-tree/SampleContract.png
+CONTRACT_NAME=SampleContract
 
-surya graph dist/SampleContract.dist.sol | dot -Tpng > analysis/control-flow/SampleContract.png
+npm run flat
 
-surya mdreport analysis/description-table/SampleContract.md dist/SampleContract.dist.sol
+surya inheritance dist/$CONTRACT_NAME.dist.sol | dot -Tpng > analysis/inheritance-tree/$CONTRACT_NAME.png
+
+surya graph dist/$CONTRACT_NAME.dist.sol | dot -Tpng > analysis/control-flow/$CONTRACT_NAME.png
+
+surya mdreport analysis/description-table/$CONTRACT_NAME.md dist/$CONTRACT_NAME.dist.sol
+
+sol2uml dist/$CONTRACT_NAME.dist.sol -o analysis/uml/$CONTRACT_NAME.svg
