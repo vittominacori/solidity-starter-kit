@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| dist/SampleContract.dist.sol | adc1695772b1d2a19d6b6c536482b33dfdc5dc82 |
+| dist/SampleContract.dist.sol | e5169346138677c795723ea21582c2946681ec89 |
 
 
 ### Contracts Description Table
@@ -23,7 +23,12 @@
 | └ | approve | External ❗️ | 🛑  |NO❗️ |
 | └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 ||||||
-| **Ownable** | Implementation |  |||
+| **Context** | Implementation |  |||
+| └ | \<Constructor\> | Internal 🔒 | 🛑  | |
+| └ | _msgSender | Internal 🔒 |   | |
+| └ | _msgData | Internal 🔒 |   | |
+||||||
+| **Ownable** | Implementation | Context |||
 | └ | \<Constructor\> | Internal 🔒 | 🛑  | |
 | └ | owner | Public ❗️ |   |NO❗️ |
 | └ | isOwner | Public ❗️ |   |NO❗️ |
