@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| dist/SampleContract.dist.sol | b593c88866542397ece65de9feb444754212b7f5 |
+| dist/SampleContract.dist.sol | d30a93cf552872ca05d19df02a036499e8b3968d |
 
 
 ### Contracts Description Table
@@ -24,12 +24,12 @@
 | └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 ||||||
 | **Context** | Implementation |  |||
-| └ | \<Constructor\> | Internal 🔒 | 🛑  | |
+| └ | <Constructor> | Internal 🔒 | 🛑  | |
 | └ | _msgSender | Internal 🔒 |   | |
 | └ | _msgData | Internal 🔒 |   | |
 ||||||
 | **Ownable** | Implementation | Context |||
-| └ | \<Constructor\> | Internal 🔒 | 🛑  | |
+| └ | <Constructor> | Internal 🔒 | 🛑  | |
 | └ | owner | Public ❗️ |   |NO❗️ |
 | └ | isOwner | Public ❗️ |   |NO❗️ |
 | └ | renounceOwnership | Public ❗️ | 🛑  | onlyOwner |
@@ -40,7 +40,7 @@
 | └ | recoverERC20 | Public ❗️ | 🛑  | onlyOwner |
 ||||||
 | **SampleContract** | Implementation | TokenRecover |||
-| └ | \<Constructor\> | Public ❗️ | 🛑  | |
+| └ | <Constructor> | Public ❗️ | 🛑  |NO❗️ |
 | └ | creator | Public ❗️ |   |NO❗️ |
 | └ | creatorDoesWork | Public ❗️ | 🛑  | onlyCreator |
 | └ | ownerDoesWork | Public ❗️ | 🛑  | onlyOwner |
