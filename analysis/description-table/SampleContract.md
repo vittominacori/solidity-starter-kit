@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| dist/SampleContract.dist.sol | c5dc902a1995bdeeb72900717c40c7c3d7cff7a4 |
+| dist/SampleContract.dist.sol | b7f66a3f61a6a874142ee4d9227069f63c8cc185 |
 
 
 ### Contracts Description Table
@@ -31,10 +31,8 @@
 | **Ownable** | Implementation | Context |||
 | └ | <Constructor> | Internal 🔒 | 🛑  | |
 | └ | owner | Public ❗️ |   |NO❗️ |
-| └ | isOwner | Public ❗️ |   |NO❗️ |
 | └ | renounceOwnership | Public ❗️ | 🛑  | onlyOwner |
 | └ | transferOwnership | Public ❗️ | 🛑  | onlyOwner |
-| └ | _transferOwnership | Internal 🔒 | 🛑  | |
 ||||||
 | **TokenRecover** | Implementation | Ownable |||
 | └ | recoverERC20 | Public ❗️ | 🛑  | onlyOwner |

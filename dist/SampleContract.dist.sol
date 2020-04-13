@@ -1,6 +1,7 @@
-pragma solidity ^0.6.3;
 
 // File: @openzeppelin/contracts/token/ERC20/IERC20.sol
+
+pragma solidity ^0.6.0;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP. Does not include
@@ -79,6 +80,8 @@ interface IERC20 {
 
 // File: @openzeppelin/contracts/GSN/Context.sol
 
+pragma solidity ^0.6.0;
+
 /*
  * @dev Provides information about the current execution context, including the
  * sender of the transaction and its data. While these are generally available
@@ -104,12 +107,17 @@ contract Context {
     }
 }
 
-// File: @openzeppelin/contracts/ownership/Ownable.sol
+// File: @openzeppelin/contracts/access/Ownable.sol
+
+pragma solidity ^0.6.0;
 
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
  * specific functions.
+ *
+ * By default, the owner account will be the one that deploys the contract. This
+ * can later be changed with {transferOwnership}.
  *
  * This module is used through inheritance. It will make available the modifier
  * `onlyOwner`, which can be applied to your functions to restrict their use to
@@ -140,15 +148,8 @@ contract Ownable is Context {
      * @dev Throws if called by any account other than the owner.
      */
     modifier onlyOwner() {
-        require(isOwner(), "Ownable: caller is not the owner");
+        require(_owner == _msgSender(), "Ownable: caller is not the owner");
         _;
-    }
-
-    /**
-     * @dev Returns true if the caller is the current owner.
-     */
-    function isOwner() public view returns (bool) {
-        return _msgSender() == _owner;
     }
 
     /**
@@ -168,13 +169,6 @@ contract Ownable is Context {
      * Can only be called by the current owner.
      */
     function transferOwnership(address newOwner) public virtual onlyOwner {
-        _transferOwnership(newOwner);
-    }
-
-    /**
-     * @dev Transfers ownership of the contract to a new account (`newOwner`).
-     */
-    function _transferOwnership(address newOwner) internal virtual {
         require(newOwner != address(0), "Ownable: new owner is the zero address");
         emit OwnershipTransferred(_owner, newOwner);
         _owner = newOwner;
@@ -182,6 +176,10 @@ contract Ownable is Context {
 }
 
 // File: eth-token-recover/contracts/TokenRecover.sol
+
+pragma solidity ^0.6.0;
+
+
 
 /**
  * @title TokenRecover
@@ -201,6 +199,9 @@ contract TokenRecover is Ownable {
 }
 
 // File: contracts/SampleContract.sol
+
+pragma solidity ^0.6.0;
+
 
 contract SampleContract is TokenRecover {
     event WorkDone(uint256 value);
