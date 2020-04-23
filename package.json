@@ -77,9 +77,9 @@
     "lite-server": "^2.5.4",
     "pify": "^5.0.0",
     "sol2uml": "^1.1.17",
-    "solhint": "^2.3.1",
+    "solhint": "^3.0.0-rc.8",
     "solidity-coverage": "^0.7.4",
-    "surya": "^0.3.5",
+    "surya": "^0.3.6-dev.8",
     "truffle": "^5.1.22",
     "truffle-flattener": "^1.4.3",
     "vuepress": "^1.4.1",
@@ -87,6 +87,6 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "3.0.0",
-    "eth-token-recover": "3.0.0"
+    "eth-token-recover": "3.0.1"
   }
 }

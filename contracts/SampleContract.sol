@@ -8,7 +8,7 @@ contract SampleContract is TokenRecover {
     address private _creator;
 
     modifier onlyCreator() {
-        require(msg.sender == _creator);
+        require(_msgSender() == _creator, "SampleContract: Caller is not the creator");
         _;
     }
 

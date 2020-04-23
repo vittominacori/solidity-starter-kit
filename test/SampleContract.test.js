@@ -34,7 +34,10 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
 
     describe('if another account is calling', function () {
       it('reverts', async function () {
-        await expectRevert.unspecified(this.contract.creatorDoesWork(value, { from: anotherAccount }));
+        await expectRevert(
+          this.contract.creatorDoesWork(value, { from: anotherAccount }),
+          'SampleContract: Caller is not the creator',
+        );
       });
     });
   });
@@ -56,7 +59,10 @@ contract('SampleContract', function ([creator, newOwner, anotherAccount]) {
 
     describe('if another account is calling', function () {
       it('reverts', async function () {
-        await expectRevert.unspecified(this.contract.ownerDoesWork(value, { from: anotherAccount }));
+        await expectRevert(
+          this.contract.ownerDoesWork(value, { from: anotherAccount }),
+          'Ownable: caller is not the owner',
+        );
       });
     });
   });
