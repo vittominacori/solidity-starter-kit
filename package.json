@@ -79,14 +79,14 @@
     "sol2uml": "^1.1.17",
     "solhint": "^3.0.0",
     "solidity-coverage": "^0.7.5",
-    "surya": "^0.3.6-dev.9",
-    "truffle": "^5.1.25",
+    "surya": "^0.3.6-dev.11",
+    "truffle": "^5.1.26",
     "truffle-flattener": "^1.4.4",
     "vuepress": "^1.5.0",
     "web3": "^1.2.7"
   },
   "dependencies": {
     "@openzeppelin/contracts": "3.0.1",
-    "eth-token-recover": "3.0.1"
+    "eth-token-recover": "3.0.3"
   }
 }
