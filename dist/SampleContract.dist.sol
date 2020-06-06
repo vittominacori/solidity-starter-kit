@@ -176,6 +176,8 @@ contract Ownable is Context {
 
 // File: eth-token-recover/contracts/TokenRecover.sol
 
+// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.6.0;
 
 
@@ -198,6 +200,8 @@ contract TokenRecover is Ownable {
 }
 
 // File: contracts/SampleContract.sol
+
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.6.0;
 
