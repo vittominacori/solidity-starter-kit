@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| dist/SampleContract.dist.sol | ec3b007f66bb8214d6be3ace5e824444596aa581 |
+| dist/SampleContract.dist.sol | 907102b9fa208938bfc023e0837a7bb5208371c8 |
 
 
 ### Contracts Description Table
@@ -24,7 +24,6 @@
 | └ | transferFrom | External ❗️ | 🛑  |NO❗️ |
 ||||||
 | **Context** | Implementation |  |||
-| └ | <Constructor> | Internal 🔒 | 🛑  | |
 | └ | _msgSender | Internal 🔒 |   | |
 | └ | _msgData | Internal 🔒 |   | |
 ||||||
