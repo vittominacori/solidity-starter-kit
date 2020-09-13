@@ -3,7 +3,7 @@
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity ^0.7.0;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
@@ -83,7 +83,7 @@ interface IERC20 {
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity ^0.7.0;
 
 /*
  * @dev Provides information about the current execution context, including the
@@ -110,7 +110,7 @@ abstract contract Context {
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity ^0.7.0;
 
 /**
  * @dev Contract module which provides a basic access control mechanism, where
@@ -132,7 +132,7 @@ contract Ownable is Context {
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
      */
-    constructor () internal {
+    constructor () {
         address msgSender = _msgSender();
         _owner = msgSender;
         emit OwnershipTransferred(address(0), msgSender);
@@ -180,7 +180,7 @@ contract Ownable is Context {
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity ^0.7.0;
 
 
 
@@ -205,7 +205,7 @@ contract TokenRecover is Ownable {
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity ^0.7.0;
 
 
 contract SampleContract is TokenRecover {
@@ -218,7 +218,7 @@ contract SampleContract is TokenRecover {
         _;
     }
 
-    constructor() public {
+    constructor() {
         _creator = owner();
     }
 
