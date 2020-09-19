@@ -4,7 +4,7 @@ title: Easily build your smart contracts
 
 # Solidity Starter Kit
 
-[![Build Status](https://travis-ci.org/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.org/vittominacori/solidity-starter-kit) 
+[![Build Status](https://travis-ci.com/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.com/vittominacori/solidity-starter-kit)
 [![Coverage Status](https://coveralls.io/repos/github/vittominacori/solidity-starter-kit/badge.svg)](https://coveralls.io/github/vittominacori/solidity-starter-kit)
 [![MIT licensed](https://img.shields.io/github/license/vittominacori/solidity-starter-kit.svg)](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE)
 
@@ -34,10 +34,10 @@ npm run console
 npm run compile
 ```
 
-### Test 
+### Test
 
 ```bash
-npm run test 
+npm run test
 ```
 
 ## Usage (using Buidler)
@@ -54,10 +54,10 @@ npm run buidler:console
 npm run buidler:compile
 ```
 
-### Test 
+### Test
 
 ```bash
-npm run buidler:test 
+npm run buidler:test
 ```
 
 ### Code Coverage
@@ -127,7 +127,7 @@ surya dependencies SampleContract dist/SampleContract.dist.sol
 ```
 ### Generate Report
 
-Edit `scripts/analyze.sh` to add your contracts 
+Edit `scripts/analyze.sh` to add your contracts
 
 ```bash
 npm run analyze
