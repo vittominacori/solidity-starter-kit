@@ -81,7 +81,7 @@
     "solidity-coverage": "^0.7.10",
     "surya": "github:vittominacori/surya#feature/update-solidity-parser",
     "truffle": "^5.1.44",
-    "truffle-flattener": "github:vittominacori/truffle-flattener#feature/allow-constructor-without-visibility",
+    "truffle-flattener": "^1.5.0",
     "vuepress": "^1.5.3",
     "web3": "^1.2.11"
   },
