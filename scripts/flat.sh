@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-CONTRACT_NAME=SampleContract
-
-truffle-flattener contracts/$CONTRACT_NAME.sol > dist/$CONTRACT_NAME.dist.sol
+for contract in "SampleContract"
+do
+  npx truffle-flattener contracts/$contract.sol > dist/$contract.dist.sol
+done
