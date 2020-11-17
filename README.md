@@ -40,24 +40,24 @@ npm run compile
 npm run test
 ```
 
-## Usage (using Buidler)
+## Usage (using Hardhat)
 
-Open the Buidler console
+Open the Hardhat console
 
 ```bash
-npm run buidler:console
+npm run hardhat:console
 ```
 
 ### Compile
 
 ```bash
-npm run buidler:compile
+npm run hardhat:compile
 ```
 
 ### Test
 
 ```bash
-npm run buidler:test
+npm run hardhat:test
 ```
 
 ### Code Coverage
@@ -90,7 +90,7 @@ npm run lint:fix
 
 By default it takes contracts compiled with Truffle.
 
-To use Buidler compiled contracts change `./build/contracts` with `./artifacts` in `bs-config.json`
+To use Hardhat compiled contracts change `./build/contracts` with `./artifacts` in `bs-config.json`
 
 ```bash
 npm run dev

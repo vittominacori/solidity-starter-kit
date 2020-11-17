@@ -80,7 +80,7 @@ interface IERC20 {
 
 // File: @openzeppelin/contracts/GSN/Context.sol
 
-// SPDX-License-Identifier: MIT
+
 
 pragma solidity ^0.7.0;
 
@@ -107,7 +107,7 @@ abstract contract Context {
 
 // File: @openzeppelin/contracts/access/Ownable.sol
 
-// SPDX-License-Identifier: MIT
+
 
 pragma solidity ^0.7.0;
 
@@ -123,7 +123,7 @@ pragma solidity ^0.7.0;
  * `onlyOwner`, which can be applied to your functions to restrict their use to
  * the owner.
  */
-contract Ownable is Context {
+abstract contract Ownable is Context {
     address private _owner;
 
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
@@ -177,7 +177,7 @@ contract Ownable is Context {
 
 // File: eth-token-recover/contracts/TokenRecover.sol
 
-// SPDX-License-Identifier: MIT
+
 
 pragma solidity ^0.7.0;
 
@@ -202,7 +202,7 @@ contract TokenRecover is Ownable {
 
 // File: contracts/SampleContract.sol
 
-// SPDX-License-Identifier: MIT
+
 
 pragma solidity ^0.7.0;
 
