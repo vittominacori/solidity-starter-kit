@@ -34,5 +34,6 @@ jobs:
         run: npm run coverage
 
       - name: Unit tests using solc nightly
-        env: SOLC_NIGHTLY=true
+        env:
+          SOLC_NIGHTLY: true
         run: npm run truffle:test
