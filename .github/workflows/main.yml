@@ -1,54 +1,34 @@
 name: CI
 
-on: [push]
+on: ["push", "pull_request"]
 
 jobs:
 
-  lint:
+  build:
+    name: Build
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Install dependencies
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: npm install
+        run: npm install
+
       - name: Linter
         run: npm run lint
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - run: npm install
       - name: Test
         run: npm test
 
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - run: npm install
       - name: Coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         run: npm run coverage
 
-  nightly_build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - run: npm install
       - name: Nightly Build
         run: npm run truffle:test
         env:
