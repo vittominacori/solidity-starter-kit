@@ -8,27 +8,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Linter
+        uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - name: Linter
       - run: npm run lint
 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Test
+        uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+      - run: npm test
 
-      - name: Unit tests (using Hardhat)
-        run: npm test
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Coverage
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - run: npm run coverage
 
-      - name: Unit tests with coverage report
-        run: npm run coverage
-
-      - name: Unit tests using solc nightly
-        run: npm run truffle:test
+  nightly_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Nightly Build
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - run: npm run truffle:test
         env:
           SOLC_NIGHTLY: true
