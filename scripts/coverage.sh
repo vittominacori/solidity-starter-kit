@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-npx truffle run coverage --network coverage
+npm run hardhat:compile
+npm run hardhat:coverage
 
 cat coverage/lcov.info | coveralls

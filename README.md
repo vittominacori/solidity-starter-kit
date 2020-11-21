@@ -25,19 +25,19 @@ npm install
 Open the Truffle console
 
 ```bash
-npm run console
+npm run truffle:console
 ```
 
 ### Compile
 
 ```bash
-npm run compile
+npm run truffle:compile
 ```
 
 ### Test
 
 ```bash
-npm run test
+npm run truffle:test
 ```
 
 ## Usage (using Hardhat)
@@ -63,7 +63,7 @@ npm run hardhat:test
 ### Code Coverage
 
 ```bash
-npm run coverage
+npm run hardhat:coverage
 ```
 
 ## Linter

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-npm run flat
-
 for contract in "SampleContract"
 do
   npx surya inheritance dist/$contract.dist.sol | dot -Tpng > analysis/inheritance-tree/$contract.png
