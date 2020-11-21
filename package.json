@@ -25,6 +25,7 @@
     "hardhat:compile": "hardhat compile",
     "hardhat:test": "hardhat test",
     "hardhat:coverage": "hardhat coverage --network coverage",
+    "test": "npm run hardhat:test",
     "coverage": "scripts/coverage.sh",
     "clean": "rm -rf coverage",
     "profile": "npm run clean && npm run coverage && open coverage/index.html",
