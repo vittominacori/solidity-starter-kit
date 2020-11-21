@@ -8,40 +8,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Linter
+      - name: Install dependencies
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: npm run lint
+        run: npm install
+      - name: Linter
+        run: npm run lint
 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Test
+      - name: Install dependencies
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: npm test
+        run: npm install
+      - name: Test
+        run: npm test
 
   coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Coverage
+      - name: Install dependencies
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: npm run coverage
+        run: npm install
+      - name: Coverage
+        run: npm run coverage
 
   nightly_build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Nightly Build
+      - name: Install dependencies
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - run: npm run truffle:test
+        run: npm install
+      - name: Nightly Build
+        run: npm run truffle:test
         env:
           SOLC_NIGHTLY: true
