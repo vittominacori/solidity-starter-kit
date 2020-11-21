@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        run: npm install
+      - run: npm install
       - name: Linter
         run: npm run lint
 
@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        run: npm install
+      - run: npm install
       - name: Test
         run: npm test
 
@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        run: npm install
+      - run: npm install
       - name: Coverage
         run: npm run coverage
 
@@ -48,7 +48,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        run: npm install
+      - run: npm install
       - name: Nightly Build
         run: npm run truffle:test
         env:
