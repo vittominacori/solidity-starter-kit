@@ -1,0 +1,38 @@
+name: CI
+
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - run: npm install
+
+  lint:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linter
+        run: npm run lint
+
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Unit tests (using Truffle)
+        run: npm run truffle:test
+
+      - name: Unit tests (using Hardhat)
+        run: npm run hardhat:test
+
+      - name: Unit tests with coverage report
+        run: npm run coverage
+
+      - name: Unit tests using solc nightly
+        env: SOLC_NIGHTLY=true
+        run: npm run truffle:test
