@@ -11,10 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+
+      - name: Install dependencies
         run: npm install
 
       - name: Linter
@@ -24,10 +26,11 @@ jobs:
         run: npm test
 
       - name: Coverage
-        uses: coverallsapp/github-action@master
+        run: npm run coverage
+
+      - uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run coverage
 
       - name: Nightly Build
         run: npm run truffle:test
