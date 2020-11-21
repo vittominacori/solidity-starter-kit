@@ -4,7 +4,7 @@ title: Easily build your smart contracts
 
 # Solidity Starter Kit
 
-[![Build Status](https://travis-ci.com/vittominacori/solidity-starter-kit.svg?branch=master)](https://travis-ci.com/vittominacori/solidity-starter-kit)
+[![CI](https://github.com/vittominacori/solidity-starter-kit/workflows/CI/badge.svg)](https://github.com/vittominacori/solidity-starter-kit/actions/)
 [![Coverage Status](https://coveralls.io/repos/github/vittominacori/solidity-starter-kit/badge.svg)](https://coveralls.io/github/vittominacori/solidity-starter-kit)
 [![MIT licensed](https://img.shields.io/github/license/vittominacori/solidity-starter-kit.svg)](https://github.com/vittominacori/solidity-starter-kit/blob/master/LICENSE)
 
