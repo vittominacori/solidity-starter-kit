@@ -1,43 +1,70 @@
-/* global Web3, TruffleContract */
+/* global Web3 */
 
 const App = {
+  coinbase: null,
+  web3: null,
   web3Provider: null,
-  contracts: [],
-  sc: {},
-  load: function (contracts) {
-    this.contracts = contracts;
-    return this.initWeb3();
+  artifacts: [],
+  promisify (fn, ...args) {
+    return new Promise((resolve, reject) => {
+      fn(...args, (err, res) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(res);
+        }
+      });
+    });
   },
   initWeb3: async function () {
     if (typeof window.ethereum !== 'undefined') {
-      console.log('injected web3');
-      this.web3Provider = window.ethereum;
-      await this.web3Provider.enable();
-    } else if (typeof window.web3 !== 'undefined') {
-      console.log('injected web3 (legacy');
-      this.web3Provider = window.web3.currentProvider;
-    } else {
-      console.log('provided web3');
-      this.web3Provider = new Web3.providers.HttpProvider('https://127.0.0.1:9545');
-      window.web3 = new Web3(this.web3Provider);
-    }
+      console.log('Injected Ethereum');
 
-    return this.initContracts();
+      this.web3Provider = window.ethereum;
+
+      this.web3 = new Web3(window.ethereum);
+
+      await this.web3Provider.request({ method: 'eth_requestAccounts' });
+
+      this.coinbase = await this.promisify(this.web3.eth.getCoinbase);
+    } else {
+      console.log('No MetaMask found');
+    }
   },
-  initContracts: function () {
-    this.contracts.forEach((contractName) => {
-      this.getContract(contractName);
-    });
-  },
-  getContract: async function (contractName) {
+  initContract: function (contractName) {
     fetch(`${contractName}.json`)
       .then((response) => response.json())
       .then((contract) => {
-        this.sc[contractName] = TruffleContract(contract);
-        this.sc[contractName].setProvider(this.web3Provider);
+        this.artifacts[contractName] = contract;
       })
       .catch(error => console.log(error));
   },
+  getContract: function (contractName, address) {
+    return new this.web3.eth.Contract(
+      this.artifacts[contractName].abi,
+      address,
+    );
+  },
+  deployContract: function (contractName, args) {
+    const contract = new this.web3.eth.Contract(this.artifacts[contractName].abi);
+
+    contract.deploy({
+      data: this.artifacts[contractName].bytecode,
+      arguments: args,
+    })
+      .send({
+        from: this.coinbase,
+      })
+      .on('error', (error) => {
+        console.log(error.message);
+      })
+      .on('transactionHash', (transactionHash) => {
+        console.log(transactionHash);
+      })
+      .on('receipt', (receipt) => {
+        console.log(receipt);
+      });
+  },
 };
 
-App.load(['SampleContract']);
+App.initWeb3();
