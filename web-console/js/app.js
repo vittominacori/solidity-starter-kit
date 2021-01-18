@@ -45,16 +45,14 @@ const App = {
       address,
     );
   },
-  deployContract: function (contractName, args) {
+  deployContract: function (contractName, args, opts) {
     const contract = new this.web3.eth.Contract(this.artifacts[contractName].abi);
 
     contract.deploy({
       data: this.artifacts[contractName].bytecode,
       arguments: args,
     })
-      .send({
-        from: this.coinbase,
-      })
+      .send(opts || { from: this.coinbase })
       .on('error', (error) => {
         console.log(error.message);
       })
