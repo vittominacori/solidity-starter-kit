@@ -11,6 +11,8 @@ title: Easily build your smart contracts
 
 A starter kit for Ethereum Smart Contracts development
 
+> :warning: **NOTE**: This repository is no longer updated. Please use [Solidity Toolkit](https://github.com/noncept/solidity-toolkit).
+
 
 ## Development
 
